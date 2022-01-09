@@ -1,0 +1,15 @@
+.button {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 16px;
+  color: #333;
+  background-color: #eee;
+  border-radius: 100px;
+  transition-property: color, background-color;
+  transition-timing-function: ease-out;
+  transition-duration: 0.3s;
+  &:hover {
+    color: #fdfdfd;
+    background-color: #333;
+  }
+}

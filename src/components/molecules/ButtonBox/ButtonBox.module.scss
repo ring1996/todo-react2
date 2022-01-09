@@ -1,0 +1,12 @@
+.buttonBox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.buttonWrapper {
+  display: inline-block;
+  + .buttonWrapper {
+    margin-left: 4px;
+  }
+}

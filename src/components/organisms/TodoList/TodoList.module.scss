@@ -1,0 +1,20 @@
+.wrapper {
+  padding: 24px 16px;
+  background-color: #eeeeee;
+  border-radius: 12px;
+  flex: 1;
+}
+
+.titleWrapper {
+  margin-left: 8px;
+}
+
+.list {
+  margin-top: 16px;
+}
+
+.item {
+  + .item {
+    margin-top: 16px;
+  }
+}
