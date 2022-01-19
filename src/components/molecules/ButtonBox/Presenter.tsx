@@ -3,16 +3,24 @@
  * PresentationalComponent
  * @package components
  */
+import React from "react";
 import classes from "./ButtonBox.module.scss";
 /* components */
 import { PrimaryButton } from "../../atoms/PrimaryButton";
 
+type Props = {
+  id: number;
+  status: string;
+  onClickChangeStatusTodo: (id: number, newStatus: string) => void;
+  onClickDeleteTodo: (id: number) => void;
+};
+
 /**
  * Presenter
- * @param {*} props
+ * @param {Props} props
  * @returns
  */
-export const Presenter = (props) => {
+export const Presenter: React.VFC<Props> = (props) => {
   switch (props.status) {
     case "notStarted":
       return (

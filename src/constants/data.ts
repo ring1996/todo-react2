@@ -3,10 +3,12 @@
  * @package constants
  */
 
+import { TodoType } from "../types/Todo";
+
 /**
  * Todoリスト初期値
  */
-export const INIT_TODO_LIST = [
+export const INIT_TODO_LIST: TodoType[] = [
   {
     id: 1,
     title: "着手前TODO内容入りますテキスト",

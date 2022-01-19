@@ -2,17 +2,24 @@
  * organisms/TodoList
  * @package components
  */
+import React from "react";
 import classes from "./TodoList.module.scss";
+import { TodoType } from "../../../types/Todo";
 /* components */
 import { TodoListTitle } from "../../atoms/TodoListTitle";
 import { Todo } from "../../molecules/Todo";
 
+type TodoListProps = {
+  title: string;
+  todos: TodoType[];
+};
+
 /**
  * TodoList
- * @param {*} props
+ * @param {TodoListProps} props
  * @returns
  */
-export const TodoList = (props) => {
+export const TodoList: React.VFC<TodoListProps> = (props) => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.titleWrapper}>

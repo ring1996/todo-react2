@@ -2,6 +2,7 @@
  * pages/TopPage
  * @package components
  */
+import React from "react";
 import classes from "./TopPage.module.scss";
 /* components */
 import { FooterOnlyLayout } from "../../templates/FooterOnlyLayout";
@@ -12,7 +13,7 @@ import { TodoLists } from "../../organisms/TodoLists";
  * TopPage
  * @returns
  */
-export const TopPage = () => {
+export const TopPage: React.VFC = () => {
   return (
     <FooterOnlyLayout>
       <div className={classes.todoInformationWrapper}>

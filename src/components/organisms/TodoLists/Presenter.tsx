@@ -3,16 +3,24 @@
  * PresentationalComponent
  * @package components
  */
+import React from "react";
 import classes from "./TodoLists.module.scss";
+import { TodoType } from "../../../types/Todo";
 /* components */
 import { TodoList } from "../TodoList";
 
+type Props = {
+  notStartedTodos: TodoType[];
+  inProgressTodos: TodoType[];
+  completedTodos: TodoType[];
+};
+
 /**
  * Presenter
- * @param {*} props
+ * @param {Props} props
  * @returns
  */
-export const Presenter = (props) => {
+export const Presenter: React.VFC<Props> = (props) => {
   return (
     <ul className={classes.list}>
       <li className={classes.item}>
